@@ -14,16 +14,16 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   var _questionIndex = 0;
-  @override
-  Widget build(BuildContext context) {
+  void _answerQuestion() {
     setState(() {
       _questionIndex = _questionIndex + 1;
     });
-    void _answerQuestion() {
-      print('Answer choosen');
-      print(_questionIndex);
-    }
+    print('Answer choosen');
+    print(_questionIndex);
+  }
 
+  @override
+  Widget build(BuildContext context) {
     var questions = [
       'what\'s your favourite color?',
       'what\'s your favourite animal?',
